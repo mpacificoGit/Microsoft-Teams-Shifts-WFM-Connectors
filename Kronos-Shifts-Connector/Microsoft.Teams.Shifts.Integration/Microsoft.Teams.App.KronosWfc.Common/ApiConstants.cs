@@ -12,7 +12,7 @@ namespace Microsoft.Teams.App.KronosWfc.Common
         /// <summary>
         /// Used as an opening braces to send post soap requests.
         /// </summary>
-        public const string SoapEnvOpen = @"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:hs=""http://localhost/wfc/XMLAPISchema"" ><soapenv:Body><hs:KronosWFC><Kronos_WFC version = ""1.0"">";
+        public const string SoapEnvOpen = @"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:hs=""http://localhost/wfc/XMLAPISchema"" ><soapenv:Body><hs:KronosWFC><Kronos_WFC version = ""1.0"" Target = ""USA"">";
 
         /// <summary>
         /// Used as an closing braces to send post soap requests.

@@ -65,10 +65,11 @@ namespace Microsoft.Teams.App.KronosWfc.BusinessLogic.Logon
             try
             {
                 string xmlLoginRequest = this.CreateLogOnRequest(username, password);
-
+                string soapEnvOpenUSA = @"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:hs=""http://localhost/wfc/XMLAPISchema"" ><soapenv:Body><hs:KronosWFC><Kronos_WFC version = ""1.0"" Target = ""USA"">";
                 var tupleResponse = await this.apiHelper.SendSoapPostRequestAsync(
                     endPointUrl,
-                    ApiConstants.SoapEnvOpen,
+                    //ApiConstants.SoapEnvOpen,
+                    soapEnvOpenUSA,
                     xmlLoginRequest,
                     ApiConstants.SoapEnvClose,
                     string.Empty).ConfigureAwait(false);

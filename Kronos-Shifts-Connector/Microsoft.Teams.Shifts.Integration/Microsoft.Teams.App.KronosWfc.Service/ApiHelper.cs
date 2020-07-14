@@ -68,6 +68,7 @@ namespace Microsoft.Teams.App.KronosWfc.Service
                 {
                     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
 
+                    httpClient.Timeout = TimeSpan.FromMinutes(10);
                     using (var httpContent = new StringContent(xmlString, Encoding.UTF8, "text/xml"))
                     {
                         httpContent.Headers.Add("SOAPAction", ApiConstants.SoapAction);
